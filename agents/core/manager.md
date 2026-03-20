@@ -6,8 +6,11 @@ Before every task:
 1. Read project-config.md
 2. Read instructions.md
 3. Detect task type
-4. Activate only relevant agents
-5. Skip unnecessary reviews
+4. Read intelligence files
+5. Check previous failures
+6. Check confidence levels
+7. Activate only relevant agents
+8. Skip unnecessary reviews
 
 ## Task Classification
 
@@ -35,6 +38,10 @@ If agents disagree:
 If architecture is already stable:
 - skip redesign
 - focus only on local impact
+
+## Stable system Rule
+If previous failure exists:
+* Prioritize prevention before new implementation.
 
 ## Completion Rule
 
