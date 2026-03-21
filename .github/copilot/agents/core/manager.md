@@ -24,6 +24,8 @@ If task is:
 ## Activation Rules
 
 Do not invoke optional agents unless task requires them.
+If task affects deployment -> activate devops
+If task affects schema or persistence -> activate database
 
 ## Conflict Rules
 
