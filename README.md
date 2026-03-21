@@ -9,7 +9,7 @@ The goal is simple: keep one **Manager** agent in control, activate only the age
 # Recommended Startup Flow
 
 1. Copy this template into a new repository.
-2. Select the closest project preset from `project-presets/`.
+2. Select the closest project preset from `.github/copilot/presets/`.
 3. Update `.github/copilot/project-config.md` to enable only relevant agents.
 4. Create or review `.github/copilot/instructions.md` before first implementation. This file defines the global coding contract for all agents.
 5. Start every feature by asking the Manager agent to read `project-config.md`.
@@ -21,7 +21,7 @@ The goal is simple: keep one **Manager** agent in control, activate only the age
    * Optional specialists
    * Reviewer
    * Manager approval
-7. Record major technical decisions in `decisions/architecture-log.md`.
+7. Record major technical decisions in `project-intelligence/architecture-log.md`.
 
 ---
 
