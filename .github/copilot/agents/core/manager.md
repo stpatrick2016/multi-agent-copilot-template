@@ -21,12 +21,6 @@ If task is:
 - security-sensitive -> security before reviewer
 - performance-sensitive -> performance before reviewer
 
-## Activation Rules
-
-Do not invoke optional agents unless task requires them.
-If task affects deployment -> activate devops
-If task affects schema or persistence -> activate database
-
 ## Conflict Rules
 
 If agents disagree:
@@ -51,3 +45,136 @@ A task is complete only when:
 - implementation exists
 - tests pass
 - reviewer has no blocking objections
+
+# Activation Matrix
+
+## Always Active Core Flow
+
+Every non-trivial task starts with:
+
+1. manager
+2. architect
+3. coder
+4. tester
+5. reviewer
+
+Architect may be skipped only for small isolated fixes.
+
+---
+
+## Optional Agent Activation Rules
+
+### security
+
+Activate if task includes:
+
+* authentication
+* authorization
+* external input
+* file upload
+* API exposure
+* secrets handling
+
+---
+
+### performance
+
+Activate if task includes:
+
+* frame loop logic
+* large collections
+* repeated allocations
+* async throughput
+* rendering-sensitive work
+
+---
+
+### devops
+
+Activate if task includes:
+
+* CI/CD
+* deployment
+* Docker
+* environment variables
+* build pipeline changes
+
+---
+
+### database
+
+Activate if task includes:
+
+* schema changes
+* migrations
+* persistence contracts
+* query logic
+* indexing assumptions
+
+---
+
+### docs
+
+Activate if task includes:
+
+* setup changes
+* public API changes
+* architecture changes
+* workflow changes
+
+---
+
+### failure-analysis
+
+Activate if task includes:
+
+* save/load systems
+* lifecycle logic
+* retries
+* async recovery
+* state restoration
+* multi-step flows
+
+---
+
+## Project-Specific Agent Activation
+
+### unity-agent
+
+Activate if task includes:
+
+* scene logic
+* prefab ownership
+* MonoBehaviour lifecycle
+* ScriptableObject usage
+* editor tooling
+
+---
+
+## Skip Rule
+
+Optional agents must remain inactive unless trigger conditions are clearly present.
+
+Never activate optional agents by default.
+
+---
+
+## Escalation Rule
+
+If two or more optional triggers appear together:
+Manager may sequence specialists after tester, before reviewer.
+
+Order:
+
+1. security
+2. performance
+3. devops/database
+4. docs/failure-analysis
+
+---
+
+## Minimality Rule
+
+Prefer fewer active agents when confidence is high.
+
+More agents do not automatically improve quality.
