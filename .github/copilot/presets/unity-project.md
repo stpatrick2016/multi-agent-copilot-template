@@ -4,7 +4,7 @@ Active:
 - coder
 - tester
 - reviewer
-- unity-agent
+- unity
 - performance
 
 Disabled:

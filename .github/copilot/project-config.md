@@ -12,7 +12,7 @@ optional:
 - performance
 
 project_specific:
-- unity-agent
+- unity
 
 disabled:
 - devops

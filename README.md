@@ -43,7 +43,7 @@ Optional agents should only be enabled when needed:
 * database
 * ui
 * docs
-* unity-agent
+* unity
 
 ---
 
